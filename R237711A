@@ -1,0 +1,23 @@
+y=float(input("Enter y coordinate: "))
+y1=float(input("Enter y1 coordinate: "))
+x=float(input("Enter x coordinate: "))
+x1=float(input("Enter x1 coordinate: "))
+dY=y1-y
+dX=x1-x
+print("dY=",dY)
+print("dX=",dX)
+import math
+r=math.sqrt(dY**2+dX**2)
+print("r=",r)
+b=dY/dX
+bearing=math.atan(b)
+bearing=math.degrees(bearing)
+print("Bearing=",bearing)
+if dY>0 and dX>0:
+    print("Direction=",bearing)
+elif dY>0 and dX<0:
+    print("Direction=",180-bearing)
+elif dY<0 and dX<0:
+    print("Direction=",180+bearing)
+else:
+    print("Direction=",360+bearing)
